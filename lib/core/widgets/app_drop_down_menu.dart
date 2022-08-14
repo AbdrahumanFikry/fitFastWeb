@@ -229,7 +229,7 @@ class AppDropDownSearch<T> extends StatelessWidget {
               style: AppUtil.textStyle(
                 context,
                 fontWeight: FontWeight.w500,
-                fontSize: 14.sp,
+                fontSize: 14.0,
                 color: Theme.of(context).errorColor,
               ),
               maxLines: 5,
