@@ -8,10 +8,16 @@ class WebContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final needOverallPadding = context.screenWidth >= 1500;
     return Center(
-      child: SizedBox(
-        width: context.screenWidth >= 1400 ? 1300 : context.screenWidth,
-        child: child,
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: needOverallPadding ? 0.0 : 20.0,
+        ),
+        child: SizedBox(
+          width: needOverallPadding ? 1400 : context.screenWidth,
+          child: child,
+        ),
       ),
     );
   }

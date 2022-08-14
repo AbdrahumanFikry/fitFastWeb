@@ -1,10 +1,23 @@
 part of 'daily_planner_bloc.dart';
 
-abstract class DailyPlannerState extends Equatable {
-  const DailyPlannerState();
-}
+class DailyPlannerState extends Equatable {
+  final String? selectedPlan;
+  final String? selectedCategory;
 
-class DailyPlannerInitial extends DailyPlannerState {
+  const DailyPlannerState({
+    this.selectedPlan = "Silver",
+    this.selectedCategory = "Meat Meals",
+  });
+
+  DailyPlannerState copyWith({
+    String? selectedPlan,
+    String? selectedCategory,
+  }) =>
+      DailyPlannerState(
+        selectedCategory: selectedCategory ?? this.selectedCategory,
+        selectedPlan: selectedPlan ?? this.selectedPlan,
+      );
+
   @override
-  List<Object> get props => [];
+  List<Object?> get props => [selectedPlan, selectedCategory];
 }

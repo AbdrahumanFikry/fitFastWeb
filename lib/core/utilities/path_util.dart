@@ -16,4 +16,7 @@ class WebPathUtil {
   static const String smsSVG = "${svgPath}sms.svg";
   static const String twitterSVG = "${svgPath}twitter.svg";
   static const String whatsappSVG = "${svgPath}whatsapp.svg";
+  static const String crownSVG = "${svgPath}crown.svg";
+  static const String mealSVG = "${svgPath}meal.svg";
+  static const String gridSVG = "${svgPath}grid.svg";
 }
