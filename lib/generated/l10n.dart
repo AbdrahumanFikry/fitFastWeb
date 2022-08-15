@@ -89,6 +89,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Choose`
+  String get choose {
+    return Intl.message(
+      'Choose',
+      name: 'choose',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chosen`
+  String get chosen {
+    return Intl.message(
+      'Chosen',
+      name: 'chosen',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Details`
+  String get details {
+    return Intl.message(
+      'Details',
+      name: 'details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total`
+  String get total {
+    return Intl.message(
+      'Total',
+      name: 'total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Checkout`
+  String get checkout {
+    return Intl.message(
+      'Checkout',
+      name: 'checkout',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

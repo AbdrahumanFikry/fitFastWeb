@@ -10,15 +10,17 @@ class _PlanCategoryPicker extends StatelessWidget {
       borderRadius: AppUtil.borderRadius20,
       child: Padding(
         padding: const EdgeInsets.only(top: 10.0),
-        child: context.isMobile || context.isTablet
-            ? ListView(children: const [_PlanLevels(), _MealCategories()])
-            : Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  _PlanLevels(),
-                  Expanded(child: _MealCategories()),
-                ],
-              ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const _PlanLevels(),
+            if (context.isMobile || context.isTablet)
+              const _MealCategories()
+            else
+              const Expanded(child: _MealCategories()),
+          ],
+        ),
       ),
     );
   }

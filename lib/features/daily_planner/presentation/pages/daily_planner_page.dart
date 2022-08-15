@@ -21,6 +21,12 @@ part '../widgets/plan_levels.dart';
 
 part '../widgets/meal_categories.dart';
 
+part '../widgets/meals_picker.dart';
+
+part '../widgets/meal_date_picker.dart';
+
+part '../widgets/meals_for_selected_category.dart';
+
 class DailyPlannerPage extends StatelessWidget {
   const DailyPlannerPage({Key? key}) : super(key: key);
 
@@ -36,7 +42,7 @@ class DailyPlannerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<DailyPlannerBloc>(
-      create: (_) => DailyPlannerBloc(),
+      create: (_) => DailyPlannerBloc()..add(InitPlanner()),
       child: BlocListener<DailyPlannerBloc, DailyPlannerState>(
         listenWhen: (previous, current) => previous != current,
         listener: (context, state) async {},

@@ -2,5 +2,10 @@
   "appName": "FitFast",
   "dailyPlanner": "Daily Planner",
   "pickAPlan": "Pick A Plan",
-  "pickMealCategory": "Pick Meal Category"
+  "pickMealCategory": "Pick Meal Category",
+  "choose": "Choose",
+  "chosen": "Chosen",
+  "details": "Details",
+  "total": "Total",
+  "checkout": "Checkout"
 }

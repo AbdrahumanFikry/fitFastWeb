@@ -19,4 +19,9 @@ class WebPathUtil {
   static const String crownSVG = "${svgPath}crown.svg";
   static const String mealSVG = "${svgPath}meal.svg";
   static const String gridSVG = "${svgPath}grid.svg";
+  static const String arrowLeftSVG = "${svgPath}arrow_left.svg";
+  static const String arrowRightSVG = "${svgPath}arrow_right.svg";
+  static const String addSquareSVG = "${svgPath}add-square.svg";
+  static const String tickSquareSVG = "${svgPath}tick-square.svg";
+  static const String starSVG = "${svgPath}star.svg";
 }

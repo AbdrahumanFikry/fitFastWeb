@@ -4,6 +4,11 @@ abstract class DailyPlannerEvent extends Equatable {
   const DailyPlannerEvent();
 }
 
+class InitPlanner extends DailyPlannerEvent {
+  @override
+  List<Object?> get props => [];
+}
+
 class SelectPlan extends DailyPlannerEvent {
   final String plan;
 
@@ -20,4 +25,13 @@ class SelectCategory extends DailyPlannerEvent {
 
   @override
   List<Object?> get props => [category];
+}
+
+class SelectDate extends DailyPlannerEvent {
+  final DateTime dateTime;
+
+  const SelectDate(this.dateTime);
+
+  @override
+  List<Object?> get props => [dateTime];
 }
