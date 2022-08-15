@@ -100,8 +100,8 @@ class _MealCard extends StatelessWidget {
               : CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SvgPicture.asset(
-              WebPathUtil.instagramSVG,
+            Image.asset(
+              WebPathUtil.mealPNG,
               width: 100.0,
               height: 100.0,
               fit: BoxFit.fill,

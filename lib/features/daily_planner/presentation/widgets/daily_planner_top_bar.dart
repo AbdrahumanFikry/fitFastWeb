@@ -56,8 +56,8 @@ class _DailyPlannerTopBar extends StatelessWidget {
             if (context.isWebOrDesktop)
               Positioned.fill(
                 child: Center(
-                  child: SvgPicture.asset(
-                    WebPathUtil.fitFastLogoVerticalSVG,
+                  child: Image.asset(
+                    WebPathUtil.appLogo,
                     width: 260.0,
                     height: 36.0,
                     fit: BoxFit.fill,
@@ -76,8 +76,8 @@ class _DailyPlannerTopBar extends StatelessWidget {
             ),
             child: Row(
               children: [
-                SvgPicture.asset(
-                  WebPathUtil.fitFastLogoVerticalSVG,
+                Image.asset(
+                  WebPathUtil.appLogo,
                   height: 30.0,
                   fit: BoxFit.fitHeight,
                 ),

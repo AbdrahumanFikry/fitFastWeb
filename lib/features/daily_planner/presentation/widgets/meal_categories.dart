@@ -102,8 +102,8 @@ class _CategoryCard extends StatelessWidget {
           child: context.isMobile
               ? Row(
                   children: [
-                    SvgPicture.asset(
-                      WebPathUtil.instagramSVG,
+                    Image.asset(
+                      WebPathUtil.mealPNG,
                       width: 80.0,
                       height: 80.0,
                       fit: BoxFit.fill,
@@ -152,8 +152,8 @@ class _CategoryCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
-                      child: SvgPicture.asset(
-                        WebPathUtil.instagramSVG,
+                      child: Image.asset(
+                        WebPathUtil.mealPNG,
                         width: double.infinity,
                         fit: BoxFit.fitHeight,
                       ),

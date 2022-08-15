@@ -80,8 +80,8 @@ class _CartItemCard extends StatelessWidget {
               ? MainAxisAlignment.center
               : MainAxisAlignment.start,
           children: [
-            SvgPicture.asset(
-              WebPathUtil.instagramSVG,
+            Image.asset(
+              WebPathUtil.mealPNG,
               width: 36.0,
               height: 36.0,
               fit: BoxFit.fill,

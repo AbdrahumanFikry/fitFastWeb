@@ -4,7 +4,8 @@ const svgPath = 'assets/svg/';
 
 class WebPathUtil {
   //Images
-  static const String appLogo = "${imagesPath}appLogo.jpg";
+  static const String appLogo = "${imagesPath}appLogo.png";
+  static const String mealPNG = "${imagesPath}meal.png";
 
   //Icons
 
