@@ -27,6 +27,8 @@ part '../widgets/meal_date_picker.dart';
 
 part '../widgets/meals_for_selected_category.dart';
 
+part '../widgets/cart.dart';
+
 class DailyPlannerPage extends StatelessWidget {
   const DailyPlannerPage({Key? key}) : super(key: key);
 

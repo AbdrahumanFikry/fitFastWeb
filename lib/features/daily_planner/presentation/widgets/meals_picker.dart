@@ -17,7 +17,7 @@ class _MealsPicker extends StatelessWidget {
           else
             const _MealsForSelectedCategory(),
           const SizedBox(height: 30.0),
-          const SizedBox(height: 130),
+          const _Cart(),
         ],
       ),
     );
