@@ -16,7 +16,7 @@ class _MealDatePicker extends StatelessWidget {
               GlobalCard(
                 onTap: () async => await scrollController.animateTo(
                   scrollController.offset - 130.0,
-                  duration: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 300),
                   curve: Curves.easeIn,
                 ),
                 color: ColorUtil.mediumGreyColor,
@@ -57,7 +57,7 @@ class _MealDatePicker extends StatelessWidget {
               GlobalCard(
                 onTap: () async => await scrollController.animateTo(
                   scrollController.offset + 130.0,
-                  duration: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 300),
                   curve: Curves.easeIn,
                 ),
                 color: ColorUtil.mediumGreyColor,

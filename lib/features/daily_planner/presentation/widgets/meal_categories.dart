@@ -6,7 +6,12 @@ class _MealCategories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 22.0, right: 22.0, top: 12.0),
+      padding: const EdgeInsets.only(
+        left: 22.0,
+        right: 22.0,
+        top: 12.0,
+        bottom: 10.0,
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: context.isMobile
