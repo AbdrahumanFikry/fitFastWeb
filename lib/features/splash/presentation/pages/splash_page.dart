@@ -1,3 +1,4 @@
+import 'package:fit_fast_core/fit_fast_core.dart';
 import 'package:fit_fast_web/core/utilities/path_util.dart';
 import 'package:fit_fast_web/features/daily_planner/presentation/pages/daily_planner_page.dart';
 import 'package:fit_fast_web/features/splash/presentation/cubit/splash_cubit.dart';
@@ -42,8 +43,8 @@ class _SplashWidgets extends StatelessWidget {
       body: Center(
         child: Image.asset(
           WebPathUtil.appLogo,
-          width: 300,
-          height: 300,
+          width: context.isMobile ? 216.0 : 400,
+          height: context.isMobile ? 36.0 : 70,
           fit: BoxFit.fill,
         ),
       ),
