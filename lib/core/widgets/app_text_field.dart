@@ -1,4 +1,5 @@
 import 'package:fit_fast_core/fit_fast_core.dart';
+import 'package:fit_fast_web/core/utilities/path_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -160,26 +161,26 @@ class AppTextField extends StatelessWidget {
                   prefixIconConstraints: const BoxConstraints.tightFor(
                     width: 56.0,
                   ),
-                  // suffixIcon: suffixWidget == null && !isPassword
-                  //     ? null
-                  //     : suffixWidget ??
-                  //         (isPassword
-                  //             ? InkWell(
-                  //                 onTap: changeObscuring,
-                  //                 borderRadius: borderRadius,
-                  //                 child: Padding(
-                  //                   padding: const EdgeInsets.all(12.0),
-                  //                   child: SvgPicture.asset(
-                  //                     hidePassword
-                  //                         ? PathUtil.openEyeSVG
-                  //                         : PathUtil.openEyeSVG,
-                  //                     width: 24.0,
-                  //                     height: 24.0,
-                  //                     fit: BoxFit.contain,
-                  //                   ),
-                  //                 ),
-                  //               )
-                  //             : null),
+                  suffixIcon: suffixWidget == null && !isPassword
+                      ? null
+                      : suffixWidget ??
+                          (isPassword
+                              ? InkWell(
+                                  onTap: changeObscuring,
+                                  borderRadius: borderRadius,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: SvgPicture.asset(
+                                      hidePassword
+                                          ? WebPathUtil.openEyeSVG
+                                          : WebPathUtil.openEyeSVG,
+                                      width: 24.0,
+                                      height: 24.0,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                )
+                              : null),
                   enabledBorder: AppUtil.outLineInputBorder(
                     color: Colors.transparent,
                     borderRadius: borderRadius,

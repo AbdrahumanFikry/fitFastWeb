@@ -28,4 +28,5 @@ class WebPathUtil {
   static const String starSVG = "${svgPath}star.svg";
   static const String trashSVG = "${svgPath}trash.svg";
   static const String replaceSVG = "${svgPath}replace.svg";
+  static const String openEyeSVG = "${svgPath}open_eye.svg";
 }

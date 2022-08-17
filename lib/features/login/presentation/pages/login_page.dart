@@ -1,5 +1,6 @@
 import 'package:fit_fast_core/fit_fast_core.dart';
 import 'package:fit_fast_web/core/widgets/app_text_field.dart';
+import 'package:fit_fast_web/features/daily_planner/presentation/pages/daily_planner_page.dart';
 import 'package:fit_fast_web/features/login/presentation/cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

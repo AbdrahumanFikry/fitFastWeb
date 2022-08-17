@@ -6,7 +6,7 @@ class _LoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppButton(
-      onTap: () {},
+      onTap: () => Navigator.pushNamed(context, DailyPlannerPage.routeName),
       backgroundColor: ColorUtil.accentColor,
       fontSize: 16.0,
       elevation: 0.0,

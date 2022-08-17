@@ -9,6 +9,8 @@ class _PasswordInput extends StatelessWidget {
       hintText: S.of(context).password,
       hintColor: ColorUtil.greyColor,
       fillColor: ColorUtil.lightGreyColor,
+      isPassword: true,
+      hidePassword: true,
     );
   }
 }
