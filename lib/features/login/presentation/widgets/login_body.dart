@@ -6,7 +6,7 @@ class _LoginBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: context.screenHeight - 80.0,
+      height: context.screenHeight - 85.0,
       decoration: const BoxDecoration(
         color: ColorUtil.whiteScaffold,
         image: DecorationImage(
@@ -44,6 +44,7 @@ class _LoginBody extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const _ErrorPopUp(),
                   const _EmailInput(),
                   const _PasswordInput(),
                   const SizedBox(height: 18.0),

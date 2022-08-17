@@ -22,6 +22,8 @@ part '../widgets/forgot_password_button.dart';
 
 part '../widgets/login_button.dart';
 
+part '../widgets/error_pop_up.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 

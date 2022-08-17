@@ -5,12 +5,18 @@ class _PasswordInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppTextField(
-      hintText: S.of(context).password,
-      hintColor: ColorUtil.greyColor,
-      fillColor: ColorUtil.lightGreyColor,
-      isPassword: true,
-      hidePassword: true,
+    final loginCubit = context.read<LoginCubit>();
+    return BlocBuilder<LoginCubit, LoginState>(
+      builder: (context, state) => AppTextField(
+        hintText: S.of(context).password,
+        hintColor: ColorUtil.greyColor,
+        fillColor: ColorUtil.lightGreyColor,
+        isPassword: true,
+        hidePassword: state.hidePassword,
+        changeObscuring: loginCubit.changePasswordObscuring,
+        readOnly: state.loading,
+        onChanged: (value) => loginCubit.changePassword(value),
+      ),
     );
   }
 }

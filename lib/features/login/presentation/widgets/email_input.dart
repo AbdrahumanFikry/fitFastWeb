@@ -5,10 +5,14 @@ class _EmailInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppTextField(
-      hintText: S.of(context).email,
-      hintColor: ColorUtil.greyColor,
-      fillColor: ColorUtil.lightGreyColor,
+    return BlocBuilder<LoginCubit, LoginState>(
+      builder: (context, state) => AppTextField(
+        hintText: S.of(context).email,
+        hintColor: ColorUtil.greyColor,
+        fillColor: ColorUtil.lightGreyColor,
+        readOnly: state.loading,
+        onChanged: (value) => context.read<LoginCubit>().changeEmail(value),
+      ),
     );
   }
 }
