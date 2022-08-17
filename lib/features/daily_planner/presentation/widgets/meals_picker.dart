@@ -10,14 +10,11 @@ class _MealsPicker extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const _MealDatePicker(),
-          if (context.isWebOrDesktop)
-            const Expanded(child: _MealsForSelectedCategory())
-          else
-            const _MealsForSelectedCategory(),
-          const SizedBox(height: 30.0),
-          const _Cart(),
+        children: const [
+          _MealDatePicker(),
+          _MealsForSelectedCategory(),
+          SizedBox(height: 30.0),
+          _Cart(),
         ],
       ),
     );

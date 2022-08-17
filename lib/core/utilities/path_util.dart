@@ -6,6 +6,7 @@ class WebPathUtil {
   //Images
   static const String appLogo = "${imagesPath}appLogo.png";
   static const String mealPNG = "${imagesPath}meal.png";
+  static const String loginBackgroundPNG = "${imagesPath}login_bg.png";
 
   //Icons
 
@@ -25,4 +26,6 @@ class WebPathUtil {
   static const String addSquareSVG = "${svgPath}add-square.svg";
   static const String tickSquareSVG = "${svgPath}tick-square.svg";
   static const String starSVG = "${svgPath}star.svg";
+  static const String trashSVG = "${svgPath}trash.svg";
+  static const String replaceSVG = "${svgPath}replace.svg";
 }

@@ -29,10 +29,7 @@ class _MealCategories extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 12.0),
-          if (context.isMobile || context.isTablet)
-            const _CategoriesGrid()
-          else
-            const Expanded(child: _CategoriesGrid()),
+          const _CategoriesGrid()
         ],
       ),
     );
@@ -50,13 +47,12 @@ class _CategoriesGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isStatic = context.isMobile || context.isTablet;
     return BlocBuilder<DailyPlannerBloc, DailyPlannerState>(
       buildWhen: (previous, current) =>
           previous.selectedCategory != current.selectedCategory,
       builder: (context, state) => GridView.builder(
-        shrinkWrap: isStatic,
-        physics: isStatic ? const NeverScrollableScrollPhysics() : null,
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: context.isMobile ? 1 : 2,
           childAspectRatio: 1,

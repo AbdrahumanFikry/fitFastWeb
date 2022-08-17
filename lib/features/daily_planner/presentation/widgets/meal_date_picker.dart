@@ -5,8 +5,8 @@ class _MealDatePicker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scrollController =
-        context.read<DailyPlannerBloc>().datesScrollController;
+    final plannerBloc = context.read<DailyPlannerBloc>();
+    final scrollController = plannerBloc.datesScrollController;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20.0),
       child: BlocBuilder<DailyPlannerBloc, DailyPlannerState>(
@@ -39,18 +39,16 @@ class _MealDatePicker extends StatelessWidget {
                   child: ListView(
                     controller: scrollController,
                     scrollDirection: Axis.horizontal,
-                    children: List.generate(
-                      10,
-                      (index) {
-                        final date = DateTime.now().add(Duration(days: index));
-                        final selected = date.day == state.selectedDate?.day &&
-                            date.month == state.selectedDate?.month;
-                        return _DayCard(
-                          dateTime: date,
-                          selected: selected,
-                        );
-                      },
-                    ),
+                    children: state.availableDates?.map(
+                          (date) {
+                            final selected = date == state.selectedDate;
+                            return _DayCard(
+                              dateTime: date,
+                              selected: selected,
+                            );
+                          },
+                        ).toList() ??
+                        [],
                   ),
                 ),
               ),
@@ -85,11 +83,13 @@ class _MealDatePicker extends StatelessWidget {
 class _DayCard extends StatelessWidget {
   final DateTime dateTime;
   final bool selected;
+  final bool filled;
 
   const _DayCard({
     Key? key,
     required this.dateTime,
     this.selected = false,
+    this.filled = false,
   }) : super(key: key);
 
   @override
@@ -104,6 +104,13 @@ class _DayCard extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           child: Row(
             children: [
+              if (filled) ...const [
+                CircleAvatar(
+                  radius: 5.0,
+                  backgroundColor: ColorUtil.accentColor,
+                ),
+                SizedBox(width: 5.0),
+              ],
               Text(
                 dateTime.toFormattedDate('dd'),
                 style: AppUtil.textStyle(

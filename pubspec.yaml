@@ -20,6 +20,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   intl: ^0.17.0
   flutter_svg: ^1.1.3
+  dropdown_button2: ^1.7.2
   fit_fast_core:
     path: ../fit_fast_core
 

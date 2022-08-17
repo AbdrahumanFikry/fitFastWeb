@@ -13,13 +13,7 @@ class _PlanCategoryPicker extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const _PlanLevels(),
-            if (context.isMobile || context.isTablet)
-              const _MealCategories()
-            else
-              const Expanded(child: _MealCategories()),
-          ],
+          children: const [_PlanLevels(), _MealCategories()],
         ),
       ),
     );

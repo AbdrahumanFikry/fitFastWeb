@@ -28,9 +28,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "chosen": MessageLookupByLibrary.simpleMessage("Chosen"),
         "dailyPlanner": MessageLookupByLibrary.simpleMessage("Daily Planner"),
         "details": MessageLookupByLibrary.simpleMessage("Details"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Forgot password"),
+        "forgotPasswordQ":
+            MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
         "pickAPlan": MessageLookupByLibrary.simpleMessage("Pick A Plan"),
         "pickMealCategory":
             MessageLookupByLibrary.simpleMessage("Pick Meal Category"),
+        "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "total": MessageLookupByLibrary.simpleMessage("Total")
       };
 }

@@ -19,7 +19,7 @@ class _DailyPlannerTopBar extends StatelessWidget {
                 horizontal: context.isWebOrDesktop ? 0.0 : 15.0,
                 vertical: context.isWebOrDesktop ? 24.0 : 10.0,
               ),
-              child: WebContainer(
+              child: WebConstraints(
                 child: IntrinsicHeight(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -28,26 +28,7 @@ class _DailyPlannerTopBar extends StatelessWidget {
                         const _ProfileComponent(),
                         const Spacer(),
                       ],
-                      _ContactWidget(
-                        svgPath: WebPathUtil.instagramSVG,
-                        onTap: () {},
-                      ),
-                      _ContactWidget(
-                        svgPath: WebPathUtil.whatsappSVG,
-                        onTap: () {},
-                      ),
-                      _ContactWidget(
-                        svgPath: WebPathUtil.facebookSVG,
-                        onTap: () {},
-                      ),
-                      _ContactWidget(
-                        svgPath: WebPathUtil.instagramSVG,
-                        onTap: () {},
-                      ),
-                      _ContactWidget(
-                        svgPath: WebPathUtil.twitterSVG,
-                        onTap: () {},
-                      ),
+                      const ContactLinks(),
                     ],
                   ),
                 ),
@@ -58,9 +39,7 @@ class _DailyPlannerTopBar extends StatelessWidget {
                 child: Center(
                   child: Image.asset(
                     WebPathUtil.appLogo,
-                    width: 260.0,
-                    height: 36.0,
-                    fit: BoxFit.fill,
+                    fit: BoxFit.fitHeight,
                   ),
                 ),
               ),
@@ -78,7 +57,6 @@ class _DailyPlannerTopBar extends StatelessWidget {
               children: [
                 Image.asset(
                   WebPathUtil.appLogo,
-                  height: 30.0,
                   fit: BoxFit.fitHeight,
                 ),
                 const Spacer(),

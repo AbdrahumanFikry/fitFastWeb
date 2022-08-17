@@ -7,5 +7,10 @@
   "chosen": "Chosen",
   "details": "Details",
   "total": "Total",
-  "checkout": "Checkout"
+  "checkout": "Checkout",
+  "signIn": "Sign In",
+  "email": "Email",
+  "password": "Password",
+  "forgotPasswordQ": "Forgot password?",
+  "forgotPassword": "Forgot password"
 }

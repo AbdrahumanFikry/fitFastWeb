@@ -1,7 +1,7 @@
+import 'package:fit_fast_web/core/utilities/path_util.dart';
 import 'package:fit_fast_web/core/utilities/web_app_util.dart';
-import 'package:fit_fast_web/features/cart/presentation/pages/cart_page.dart';
 import 'package:fit_fast_web/features/daily_planner/presentation/pages/daily_planner_page.dart';
-import 'package:fit_fast_web/features/planner/presentation/pages/planner_page.dart';
+import 'package:fit_fast_web/features/login/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    prepareImages(context);
     return MaterialApp(
       title: 'FitFast',
       navigatorKey: navigatorKey,
@@ -30,10 +31,16 @@ class MyApp extends StatelessWidget {
       ],
       routes: <String, WidgetBuilder>{
         SplashPage.routeName: (_) => const SplashPage(),
+        LoginPage.routeName: (_) => const LoginPage(),
         DailyPlannerPage.routeName: (_) => const DailyPlannerPage(),
-        PlannerPage.routeName: (_) => const PlannerPage(),
-        CartPage.routeName: (_) => const CartPage(),
       },
+    );
+  }
+
+  void prepareImages(BuildContext context) async {
+    await precacheImage(
+      const AssetImage(WebPathUtil.loginBackgroundPNG),
+      context,
     );
   }
 }

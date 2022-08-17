@@ -11,7 +11,7 @@ class _ProfileComponent extends StatelessWidget {
       padding: EdgeInsets.all(8.0),
       child: CircleAvatar(
         backgroundColor: ColorUtil.mediumGreyColor,
-        radius: 24.0,
+        radius: 20,
         child: FittedBox(
           child: Center(
             child: Icon(

@@ -8,20 +8,15 @@ class _MealsForSelectedCategory extends StatelessWidget {
     return GlobalCard(
       color: ColorUtil.whiteScaffold,
       borderRadius: AppUtil.borderRadius20,
-      child: Padding(
-        padding: const EdgeInsets.only(
-          right: 5.0,
-          top: 20.0,
-          bottom: 20.0,
-          left: 20.0,
-        ),
-        child: Column(
-          crossAxisAlignment: context.isMobile
-              ? CrossAxisAlignment.center
-              : CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
+      child: Column(
+        crossAxisAlignment: context.isMobile
+            ? CrossAxisAlignment.center
+            : CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Text(
               "Meat Meals",
               style: AppUtil.textStyle(
                 context,
@@ -31,15 +26,10 @@ class _MealsForSelectedCategory extends StatelessWidget {
               ),
               textAlign: TextAlign.start,
             ),
-            const SizedBox(height: 20.0),
-            if (context.isMobile)
-              const _MealsList()
-            else if (context.isTablet)
-              const SizedBox(height: 340.0, child: _MealsList())
-            else
-              const Expanded(child: _MealsList()),
-          ],
-        ),
+          ),
+          const _MealsList(),
+          const SizedBox(height: 20.0),
+        ],
       ),
     );
   }
@@ -55,18 +45,23 @@ class _MealsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<DailyPlannerBloc, DailyPlannerState>(
-      builder: (context, state) => ListView.builder(
-        shrinkWrap: context.isMobile,
-        scrollDirection: context.isMobile ? Axis.vertical : Axis.horizontal,
-        physics: context.isMobile ? const NeverScrollableScrollPhysics() : null,
-        itemCount: _meals.length,
-        itemBuilder: (context, index) {
-          return _MealCard(
-            title: _meals[index],
-            selected: index == 0,
-          );
-        },
+    return SizedBox(
+      height: context.isMobile ? null : 340,
+      child: BlocBuilder<DailyPlannerBloc, DailyPlannerState>(
+        builder: (context, state) => ListView.builder(
+          shrinkWrap: context.isMobile,
+          scrollDirection: context.isMobile ? Axis.vertical : Axis.horizontal,
+          physics:
+              context.isMobile ? const NeverScrollableScrollPhysics() : null,
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          itemCount: _meals.length,
+          itemBuilder: (context, index) {
+            return _MealCard(
+              title: _meals[index],
+              selected: index == 0,
+            );
+          },
+        ),
       ),
     );
   }
@@ -235,7 +230,7 @@ class _MealCard extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 14.0,
-                      vertical: 12.0,
+                      vertical: 16.0,
                     ),
                     child: Text(
                       S.of(context).details,
