@@ -1,4 +1,5 @@
 import 'package:fit_fast_web/core/utilities/path_util.dart';
+import 'package:fit_fast_web/features/daily_planner/presentation/pages/daily_planner_page.dart';
 import 'package:fit_fast_web/features/login/presentation/pages/login_page.dart';
 import 'package:fit_fast_web/features/splash/presentation/cubit/splash_cubit.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class SplashPage extends StatelessWidget {
         listenWhen: (previous, current) => previous != current,
         listener: (context, state) {
           if (state is SplashFinished) {
-            Navigator.pushNamed(context, LoginPage.routeName);
+            Navigator.pushNamed(context, DailyPlannerPage.routeName);
           }
         },
         child: const _SplashWidgets(),

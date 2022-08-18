@@ -6,6 +6,7 @@ class _LoginButton extends StatelessWidget {
   Future<void> login(BuildContext context) async {
     try {
       await context.read<LoginCubit>().login();
+      Navigator.pushNamed(context, DailyPlannerPage.routeName);
     } catch (e) {}
   }
 

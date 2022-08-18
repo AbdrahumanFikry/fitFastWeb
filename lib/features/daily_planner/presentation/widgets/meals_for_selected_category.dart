@@ -53,7 +53,9 @@ class _MealsList extends StatelessWidget {
           scrollDirection: context.isMobile ? Axis.vertical : Axis.horizontal,
           physics:
               context.isMobile ? const NeverScrollableScrollPhysics() : null,
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: EdgeInsets.symmetric(
+            horizontal: context.isMobile ? 5.0 : 20.0,
+          ),
           itemCount: _meals.length,
           itemBuilder: (context, index) {
             return _MealCard(
@@ -136,6 +138,18 @@ class _MealCard extends StatelessWidget {
                   ),
                 ),
                 Text(
+                  "4.5",
+                  style: AppUtil.textStyle(
+                    context,
+                    fontWeight: FontWeight.w500,
+                    color: ColorUtil.accentColor,
+                    fontSize: 16.0,
+                  ),
+                  textAlign: TextAlign.center,
+                  maxLines: 1,
+                ),
+                const SizedBox(width: 2.0),
+                Text(
                   "(120)",
                   style: AppUtil.textStyle(
                     context,
@@ -191,6 +205,7 @@ class _MealCard extends StatelessWidget {
                       vertical: 12.0,
                     ),
                     child: Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         SvgPicture.asset(
                           selected
@@ -220,10 +235,25 @@ class _MealCard extends StatelessWidget {
                   ),
                 ),
                 if (context.isMobile)
-                  const SizedBox(width: 30.0)
+                  const SizedBox(width: 10.0)
                 else
                   const Spacer(),
                 GlobalCard(
+                  onTap: () => showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      insetPadding: const EdgeInsets.symmetric(
+                        horizontal: 20.0,
+                        vertical: 40.0,
+                      ),
+                      contentPadding: EdgeInsets.zero,
+                      backgroundColor: ColorUtil.whiteScaffold,
+                      shape: ContinuousRectangleBorder(
+                        borderRadius: AppUtil.borderRadius40,
+                      ),
+                      content: const MealDetails(),
+                    ),
+                  ),
                   color: Colors.transparent,
                   borderColor: ColorUtil.accentColor,
                   borderRadius: AppUtil.borderRadius30,

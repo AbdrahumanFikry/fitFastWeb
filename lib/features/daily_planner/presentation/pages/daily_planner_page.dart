@@ -1,6 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:fit_fast_core/fit_fast_core.dart';
 import 'package:fit_fast_web/core/utilities/path_util.dart';
+import 'package:fit_fast_web/core/utilities/web_app_util.dart';
 import 'package:fit_fast_web/core/widgets/web_constraints.dart';
 import 'package:fit_fast_web/features/daily_planner/presentation/bloc/daily_planner_bloc.dart';
 import 'package:fit_fast_web/generated/l10n.dart';
@@ -9,6 +10,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/widgets/contact_links.dart';
+import 'meal_details.dart';
 
 part '../widgets/daily_planner_top_bar.dart';
 
