@@ -17,6 +17,7 @@ class MealDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return GlobalCard(
       borderRadius: AppUtil.borderRadius50,
+      elevation: 10.0,
       child: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(vertical: 20.0),
         child: Column(
