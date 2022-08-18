@@ -347,6 +347,7 @@ class _MealContents extends StatelessWidget {
           ...contentsList
               .map(
                 (con) => Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     const CircleAvatar(
