@@ -14,7 +14,7 @@ class _Cart extends StatelessWidget {
             ? Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const _CartItemCard(title: "Meat With Rice"),
+                  const _FilledDaysDropDownMenu(),
                   const SizedBox(height: 20.0),
                   AppButton(
                     onTap: () {},
@@ -35,7 +35,6 @@ class _Cart extends StatelessWidget {
             : Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  // const _CartItemCard(title: "Meat With Rice"),
                   const _FilledDaysDropDownMenu(),
                   const Spacer(),
                   AppButton(

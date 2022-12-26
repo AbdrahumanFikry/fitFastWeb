@@ -1,5 +1,6 @@
 import 'package:fit_fast_core/fit_fast_core.dart';
 import 'package:fit_fast_web/core/utilities/path_util.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -26,6 +27,21 @@ class MealDetails extends StatelessWidget {
               : CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
+            Align(
+              alignment: Alignment.topRight,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: InkWell(
+                  onTap: () => Navigator.pop(context),
+                  child: const Icon(
+                    CupertinoIcons.clear_circled,
+                    color: ColorUtil.blackColor,
+                    size: 20.0,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 16.0),
             const _MealImagesSlider(),
             const SizedBox(height: 20.0),
             Padding(
