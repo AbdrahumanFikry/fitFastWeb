@@ -25,7 +25,7 @@ class SplashPage extends StatelessWidget {
         listenWhen: (previous, current) => previous != current,
         listener: (context, state) {
           if (state is SplashFinished) {
-            Navigator.pushNamed(context, DailyPlannerPage.routeName);
+            Navigator.pushNamed(context, LoginPage.routeName);
           }
         },
         child: const _SplashWidgets(),
